@@ -1,4 +1,4 @@
-code: customerportal-content-bundle
+code: entando-hub-content-bundle
 description: This is the Entando HUB content bundle
 components:
   pageModels:
