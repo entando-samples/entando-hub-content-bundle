@@ -43,8 +43,14 @@
                 ...(window.entando || {}),
                 keycloak,
             };
+            const silentRedirectUri = window.location.origin + '/en/cp_keycloak_silent_check_sso.page';
+            const initOptions = {
+                onLoad: 'check-sso',
+                silentCheckSsoRedirectUri: silentRedirectUri,
+                enableLogging: true
+            };
             window.entando.keycloak
-                .init({ onLoad: 'check-sso', promiseType: 'native', enableLogging: true })
+                .init(initOptions)
                 .then(onKeycloakInitialized)
                 .catch(function (e) {
                     console.error(e);
