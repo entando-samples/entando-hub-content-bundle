@@ -43,7 +43,7 @@
                 ...(window.entando || {}),
                 keycloak,
             };
-            const silentRedirectUri = window.location.origin + 'entando-de-app/en/eh_keycloak_silent_check_sso.page';
+            const silentRedirectUri = window.location.origin + '/entando-de-app/en/eh_keycloak_silent_check_sso.page';
             const initOptions = {
                 onLoad: 'check-sso',
                 silentCheckSsoRedirectUri: silentRedirectUri,
